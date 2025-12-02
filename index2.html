@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thaw12</title>
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/logo.png" />
+
+  <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://classroomgms.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/classroomgms.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+</head>
+<body class="dark-mode">
+  <header style="text-align: center; margin-top: 20px;">
+    <img src="assets/logo.png" alt="School Logo" style="margin-top: 20px; width: 100px; height: 100px; border-radius: 50%;" />
+    <h1>Welcome to ClassroomGS</h1>
+    <h2>Play over 600 games for free!</h2>
+    <p>A game site built by Derrick Richard</p>
+  </header>
+
+  <div class="center-button" style="margin: 30px 0;">
+    <a href="games/main.html">
+      <button class="styled-button">Start Playing!</button>
+    </a>
+  </div>
+
+  <section style="text-align: center; margin-top: 40px;">
+    <h3>Game Categories Available</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li>Arcade & Action — fast-paced fun and retro vibes</li>
+      <li>Puzzle & Logic — challenge your brain with clever games</li>
+      <li>Multiplayer — compete or cooperate with friends</li>
+      <li>Educational — learn while you play: math, science, history & more</li>
+      <li>Creative & Sandbox — build, explore, and experiment freely</li>
+    </ul>
+  </section>
+
+  <section style="text-align: center; margin-top: 50px;">
+    <h3>About ClassroomGS</h3>
+    <p style="max-width: 600px; margin: 0 auto;">
+      ClassroomGS is a free game platform built by Derrick Richard to give all people a fun, safe place to have fun. 
+      With over 600 games spanning arcade, puzzle, multiplayer, and educational genres, it's designed for quick access and endless entertainment. no logins, no hassle. 
+      Whether you're taking a break or sharpening your skills, ClassroomGS is your go-to destination for classroom-friendly gaming.
+    </p>
+  </section>
+
+  <section style="text-align: center; margin-top: 50px;">
+  <h3>Suggest a Game to Add</h3>
+  <p style="max-width: 600px; margin: 0 auto;">
+    Want to see your favorite game on ClassroomGS? Choose how you'd like to contribute:
+  </p>
+  <ul style="list-style: none; padding: 0; margin-top: 15px;">
+    <li><strong>Share Game Files:</strong> Already have the game? Upload it and we’ll take care of the rest.</li>
+    <li><strong>Request a Game:</strong> Tell us the name and we’ll try to track it down and add it.</li>
+    <li><strong>Custom Game Request:</strong> Have a cool idea? Let’s build something awesome together!</li>
+  </ul>
+    <br>
+    <p style="max-width: 600px; margin: 0 auto;">
+  Your game is <span style="font-size: 1.1em; font-weight: bold; font-style: italic; text-decoration: underline;">guaranteed</span> to be added as long as it meets all the terms of service, which are outlined in the submission form.
+</p>
+      <br>
+  <p style="margin-top: 20px;">Click the button below to submit your game idea:</p>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdGjJMErXtdt4AJZ4juio21Mp-M6zBfZRsd9flU3lEbTEl1EA/viewform?usp=header" method="get" target="_blank">
+    <button class="styled-button">Game Addition Form</button>
+  </form>
+</section>
+
+ <div style="text-align: left; margin-top: 40px; margin-left: 20px;">
+  <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+
+  <footer style="text-align: center; font-size: 14px; padding: 30px 20px; margin-top: 60px; background-color: #111; color: #ccc;">
+  
+    <div style="text-align: left; margin-bottom: 10px;">
+  <button onclick="toggleUpdates()" style="padding: 8px 12px; background-color: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer;">
+    View Site Updates
+  </button>
+</div>
+
+    <p>
+    <a href="https://classroomgs.github.io" style="color: #ccc;">ClassroomGS</a> © 2025 by 
+    <a href="https://derrickrichard.github.io/profile/" style="color: #ccc;">Derrick Richard</a> is licensed under 
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #ccc;">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NC" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="ND" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+  </p>
+
+</footer>
+
+<div id="updatesPopup" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 400px;
+  width: fit-content;
+  text-align: left;
+">
+  <h3 style="margin-top: 0;">Site Updates</h3>
+  <ul style="padding-left: 1em; margin: 0;">
+    <!-- add a update like this:
+  
+ <li><strong>Nov 8, 2025 – 7:30 PM:</strong> Added footer licensing and dark mode toggle.</li>
+ 
+ -->
+ <li><strong>Nov 8, 2025 – 7:30 PM:</strong> Changed the link to make it easier to remember.</li>
+    <hr>
+    <li><strong>Nov 8, 2025 – 9:34 PM:</strong> Added open and close animations for games.</li>
+    <hr>
+    <li><strong>Nov 9, 2025 – 12:21 PM::</strong>Moved the Dark Mode Toggle Button to the opposite side so it is not under the live user count.</li>
+   <hr>
+    <li><strong>Nov 9, 2025 – 3:40 PM:</strong> Added easter egg for shoutouts.</li>
+    <hr>
+    <li><strong>Nov 9, 2025 – 3:52 PM:</strong> Changed the logo img to be a clickable button to redirect you to the main page.</li>
+     <hr>
+    <li><strong>Nov109, 2025 – 8:00 AM:</strong>Changed the domain.</li>
+    <hr>
+    <li><strong>Nov 11, 2025 – 3:17 PM:</strong> Added game addition form</li>
+  </ul>
+  <div style="text-align: right; margin-top: 15px;">
+    <button onclick="toggleUpdates()" style="padding: 6px 10px; background-color: #444; color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
+  </div>
+</div>
+
+<script>
+  function toggleUpdates() {
+    const popup = document.getElementById("updatesPopup");
+    popup.style.display = popup.style.display === "none" ? "block" : "none";
+  }
+</script>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

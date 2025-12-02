@@ -1,0 +1,358 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-dark: #3730a3;
+  --bg-dark: #1e1e2f;
+  --bg-light: #f9f9f9;
+  --text-dark: #ffffff;
+  --text-light: #1a1a1a;
+  --card-bg-dark: #2c2c3e;
+  --card-bg-light: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, p {
+  text-align: center;
+  margin: 0.5em 0;
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.center-button > button,
+.styled-button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.styled-button:hover,
+.center-button > button:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-dark);
+}
+
+section {
+  animation: fadeIn 1s ease-out forwards;
+  margin-top: 40px;
+  text-align: center;
+}
+
+img[alt="ClassroomGMS Logo"] {
+  animation: logoIntro 1s ease-out forwards;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+#darkModeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#darkModeToggle:hover {
+  background-color: var(--primary-dark);
+}
+
+#searchBar {
+  display: block;
+  margin: 1.5em auto;
+  padding: 12px;
+  width: 90%;
+  max-width: 600px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.zone-item {
+  background-color: var(--card-bg-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zone-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.zone-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.zone-item button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.zone-item button:hover {
+  background-color: var(--primary-dark);
+}
+
+#zoneViewer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+
+#zoneViewer iframe {
+  width: 100%;
+  height: 90%;
+  border: none;
+}
+
+#zoneInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+}
+
+#controls button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: var(--primary-dark);
+}
+
+#topControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+#dataButtons button,
+#sortOptions {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#dataButtons button {
+  background-color: #10b981;
+  color: white;
+}
+
+#dataButtons button:hover {
+  background-color: #059669;
+}
+
+#sortOptions {
+  background-color: #fff;
+  color: #000;
+}
+
+.zone-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.zone-count {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+body:not(.dark-mode) {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body:not(.dark-mode) #searchBar {
+  background-color: #eee;
+  color: #000;
+}
+
+body:not(.dark-mode) .zone-item {
+  background-color: var(--card-bg-light);
+  color: #000;
+}
+
+body:not(.dark-mode) #zoneViewer {
+  background-color: #fff;
+}
+
+body:not(.dark-mode) #zoneInfo {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Animations */
+@keyframes logoIntro {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes flyInTop {
+  from { transform: translate(-50%, -150%); opacity: 0; }
+  to { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+@keyframes flyInBottom {
+  from { transform: translate(-50%, 150%); opacity: 0; }
+  to { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+@keyframes flyInLeft {
+  from { transform: translate(-150%, -50%); opacity: 0; }
+  to { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+@keyframes flyInRight {
+  from { transform: translate(150%, -50%); opacity: 0; }
+  to { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+.fly-in {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.flyInTop {
+  animation-name: flyInTop;
+}
+
+.flyInBottom {
+  animation-name: flyInBottom;
+}
+
+.flyInLeft {
+  animation-name: flyInLeft;
+}
+
+.flyInRight {
+  animation-name: flyInRight;
+}
+
+@keyframes flyOutTop {
+  from { transform: translate(-50%, -50%); opacity: 1; }
+  to { transform: translate(-50%, -150%); opacity: 0; }
+}
+
+@keyframes flyOutBottom {
+  from { transform: translate(-50%, -50%); opacity: 1; }
+  to { transform: translate(-50%, 150%); opacity: 0; }
+}
+
+@keyframes flyOutLeft {
+  from { transform: translate(-50%, -50%); opacity: 1; }
+  to { transform: translate(-150%, -50%); opacity: 0; }
+}
+
+@keyframes flyOutRight {
+  from { transform: translate(-50%, -50%); opacity: 1; }
+  to { transform: translate(150%, -50%); opacity: 0; }
+}
+
+.fly-out {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+}
+
+.flyOutTop {
+  animation-name: flyOutTop;
+}
+
+.flyOutBottom {
+  animation-name: flyOutBottom;
+}
+
+.flyOutLeft {
+  animation-name: flyOutLeft;
+}
+
+.flyOutRight {
+  animation-name: flyOutRight;
+}

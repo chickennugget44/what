@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Alice",
+    "username": "alice",
+    "password": "1234",
+    "banStatus": "true",
+    "banReason": "Hacking the server.(this can be whatever value i want)"
+  },
+  {
+    "name": "Bob",
+    "username": "bob",
+    "password": "5678",
+    "banStatus": "false"
+  }
+]

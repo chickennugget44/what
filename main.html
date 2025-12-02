@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thaw12</title>
+ <link rel="stylesheet" href="../style.css?v=3" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/logo.png" />
+
+  <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://classroomgms.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/classroomgms.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</head>
+<body class="dark-mode">
+  
+  <div style="position: absolute; top: 20px; left: 20px;">
+  <a href="../index.html">
+    <img src="../assets/logo.png" alt="ClassroomGMS Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+  </a>
+</div>
+
+
+  <h1>ClassroomGS</h1>
+
+  <div class="center-button">
+  <a href="mailto:derrick.richard@pothisd.us" target="_blank" rel="noopener noreferrer">
+    <button class="styled-button">Contact Derrick for feedback or questions</button>
+  </div>
+  </a>
+
+  <input type="text" id="searchBar" placeholder="Search Games" onkeyup="filterZones()" />
+
+  <div id="topControls">
+    <div id="dataButtons">
+      <button onclick="saveData()">Save Data</button>
+      <button onclick="document.getElementById('file').click()">Load Data</button>
+      <p>Saving data will create a file with all of your save data. When pressing load data, select that file to use your game states.</p>
+      <input type="file" id="file" style="display:none" onchange="loadData(event)" />
+    </div>
+    <select id="sortOptions" onchange="sortZones()">
+      <option value="name">by Name</option>
+      <option value="id">by Id</option>
+      <option value="popular">by Popularity</option>
+    </select>
+  </div>
+
+  <div class="zone-wrapper">
+    <div id="zoneCount" class="zone-count"></div>
+    <h2>Game Of The Day</h2>
+    <div id="gameOfTheDay" class="game-of-the-day"></div>
+    <div id="container">Loading...</div>
+  </div>
+
+  <div id="zoneViewer">
+    <div id="zoneInfo">
+      <div id="zoneTitle">
+        <span id="zoneName"></span> <span id="zoneId"></span>
+      </div>
+      <div id="controls">
+        <button onclick="closeZone()">Close</button>
+        <button onclick="fullscreenZone()">Fullscreen</button>
+        <button onclick="aboutBlank()">about:blank</button>
+      </div>
+    </div>
+    <iframe id="zoneFrame"></iframe>
+  </div>
+
+  <button id="darkModeToggle">Toggle Dark Mode</button>
+
+  <footer style="text-align: center; font-size: 14px; padding: 30px 20px; margin-top: 60px; background-color: #111; color: #ccc;">
+  <p>
+    <a href="https://classroommgs.github.io" style="color: #ccc;">ClassroomMGS</a> © 2025 by 
+    <a href="https://derrickrichard.github.io/profile/" style="color: #ccc;">Derrick Richard</a> is licensed under 
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #ccc;">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NC" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="ND" style="max-width: 1em; max-height: 1em; margin-left: .2em;">
+  </p>
+
+
+</footer>
+
+  <script>
+  let hoverTimer;
+
+  // Wait for the DOM to load
+  window.addEventListener("DOMContentLoaded", function () {
+    const logo = document.querySelector("img[alt='ClassroomGMS Logo']");
+
+    logo.addEventListener("mouseenter", function () {
+      hoverTimer = setTimeout(function () {
+        alert(" You found the Easter Egg!\n\nYour code is: bRAdEr52\n\nFill out the form linked at the top of the game page to get a shoutout and custom quote on the homepage!");
+      }, 6000); // 6 seconds
+    });
+
+    logo.addEventListener("mouseleave", function () {
+      clearTimeout(hoverTimer);
+    });
+  });
+</script>
+
+  <script src="../script.js?v=3"></script>
+</body>
+</html>

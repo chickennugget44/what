@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asteroid</title>
+  <link rel="icon" type="image/jpeg" href="asteroid.jpeg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="asteroid.jpeg">
+</head>
+<body>
+  <!-- Login form (shown only before login) -->
+  <form id="login-form">
+    <h1 id="login-title">Log In</h1>
+    <input id="username" type="text" placeholder="Username" required />
+    <input id="password" type="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJNsYOvW22W0-7_4gFlp6-Kk_YoMGVBNIuKqs1VFjPXio_Cw/viewform" id="link-btn">Request an Account</a>
+  </form>
+
+  <p id="form-message"></p>
+
+  <!-- Logged-in view -->
+  <div class="app hidden">
+    <header class="app-header">
+      <span id="user-message"></span>
+      <button id="logout-btn">Logout</button>
+    </header>
+    <main class="app-content">
+      <div id="logged-in-content-home"></div>
+    </main>
+  </div>
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>

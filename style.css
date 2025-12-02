@@ -1,0 +1,175 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+
+/* Login form */
+#login-form {
+  /* remove background, blur, border, shadow */
+  background: none;
+  backdrop-filter: none;
+  border-radius: 0;
+  padding: 0;
+  width: 800px;
+  margin: 80px auto;   /* keep centering if you want */
+  box-shadow: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+
+#login-form.hidden {
+  display: none;
+}
+
+#login-form input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#login-form input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px #00c6ff;
+}
+
+/* Buttons (Login + Link) */
+#login-form button,
+#link-btn {
+  display: inline-block;
+  width: 100%;              /* ✅ same size */
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;       /* ✅ center text */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#login-form button:hover,
+#link-btn:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Messages */
+#form-message {
+  margin-top: 18px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Fullscreen app layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app.hidden {
+  display: none;
+}
+
+.app-header {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  color: #fff;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.app-header button {
+  background: #fff;
+  color: #0072ff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.app-header button:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.app-content {
+  flex: 1;
+  overflow: auto;
+  background: #fdfdfd;
+  color: #000;
+  padding: 24px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: #00c6ff;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0072ff;
+}
+
+/* Ban message styling */
+.ban-message {
+  color: #ff3333;
+  font-weight: bold;
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid #ff3333;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 18px;
+  text-align: center;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+#login-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+}
