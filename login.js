@@ -1,6 +1,6 @@
 export default function login() {
   const LOGINS = "./logins.json"; // ✅ points to logins.json
-  const LOGGED_IN_CONTENT = "tetris.html";
+  const LOGGED_IN_CONTENT = "./tetris.html";
 
   const loginForm = document.getElementById("login-form");
   const formMessage = document.getElementById("form-message");
